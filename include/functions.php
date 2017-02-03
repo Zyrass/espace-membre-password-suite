@@ -165,7 +165,19 @@ function mailHtml(string $subject, string $message) {
 // - true saisit correct
 // - false saisit incorrect
 function passwordOk() :bool {
-    return true;
+    // Création d'une variable membre qui utilisera la fonction bddSelect().
+    // La requete utilisé est : 
+    // - Une sélection du password qui sera nommé dans la table membre
+    // - avec pour id un marqueur.
+    // En argument 2, on récupèrera la superglobale session qui dispose de l'id du membre.
+    $membre = bddSelect('SELECT password FROM membre WHERE id = ?', [$_SESSION['id']]);
+
+    // On ajoute ou l'on vérifie l'ancien mot de passe. Si il est bon on valide sinon non.
+    if (password_verify($_POST['oldpassword'], $membre[0]['password'])) {
+        return true; // Ok c'est bon
+    } else {
+        return false; // Ce n'est pas bon
+    }
 }
 
 // On initialise une fonction permettant de sauvegrder le mot de passe généré. 
@@ -192,6 +204,12 @@ function passwordSave(string $password = "") {
             "email" => $_POST['email']
         ]);
     } else {
-        // Gestion changement du mot de passe en BDD
+        // Mise à jour de la table membre sur le password qu'on aura nommé. On ajoute une clause ou l'on recherche
+        // Uniquement l'id qu'on nommera. En seconde arguments, on cryptera le password et on indiquera à l'id 
+        // la superglobale session qui contient justement l'id du membre.
+        bddUpdate('UPDATE membre SET password = :password WHERE id = :id', [
+            'password' => password_hash($newpassword, PASSWORD_DEFAULT),
+            'id' => $_SESSION['id']
+        ]);
     }
 }

@@ -59,9 +59,9 @@ session_start();
         <main>
             <di class="container profil">
                 <h1 class="text-center">Changer de mot de passe</h1>
-                <hr>
                 <di class="row">
                     <div class="col-sm-6 col-sm-offset-3">
+                    <hr>
                         <div class="well">
                             <?php if (!empty($erreur)) { ?>
                             <div class="alert alert-danger text-center">

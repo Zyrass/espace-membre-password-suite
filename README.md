@@ -1,18 +1,18 @@
-# espace-membre-oubli-suite
-Espace-membre (Partie Oubli + BDD) pour la 3WA
+# espace-membre-password-suite
+Espace-membre (Partie Password + BDD) pour la 3WA
 ----------
 **Voici quelques screen selon les erreurs qu'on peut avoir : + la redirection pour confirmation du bon fonctionnement**
 ID VIDE
-<img src="http://puu.sh/tLzNZ/cf0277be7a.png" alt="">
-ADDRESS INCONUE :
-<img src="http://puu.sh/tLzSY/716ae871f9.png" alt="">
+<img src="http://puu.sh/tLMSe/7749a9e6ee.png" alt="">
+BON MDP MAIS PAS DE NEW MDP
+<img src="http://puu.sh/tLNdA/8c9e5664bb.png" alt="">
 le HASH DU MDP EN BDD :
-<img src="http://puu.sh/tLzWo/6fef60f336.png" alt="">
+<img src="http://puu.sh/tLNeW/dbc01e6947.png" alt="">
 GENERATION NEW MDP :
-<img src="http://puu.sh/tLI2n/92a407124c.png" alt="">
+<img src="http://puu.sh/tLNhs/1c21f2d7df.png" alt="">
 VOIR NEW HASH BDD :
-<img src="http://puu.sh/tLI5u/3ffb4d8f31.png" alt="">
+<img src="http://puu.sh/tLNiW/754e21cdec.png" alt="">
 SE CONNECTER AVEC L'ANCIEN MDP :
-<img src="http://puu.sh/tLIf5/e0e17d3869.png" alt="">
+<img src="http://puu.sh/tLNod/122482bb55.png" alt="">
 SE CONNECTER AVEC LE NOUVEAU MDP :
-<img src="http://puu.sh/tLIgT/61511e29f0.png" alt="">
+<img src="http://puu.sh/tLNqS/98d55d0a7e.png" alt="">
